@@ -1,0 +1,16 @@
+{
+  "name": "playwright_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pw:test": "PLAYWRIGHT_BROWSERS_PATH=./pw-browsers npx playwright test --project=smoke --grep=@Sample --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.19.2",
+    "ts-node": "^10.6.0"
+  }
+}

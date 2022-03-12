@@ -1,0 +1,1 @@
+Page objects live in this dir adn all page Objects implements the _iPage interface.
