@@ -1,12 +1,12 @@
-# The ultimate test framework template
+# The ultimate testBootstrap framework template
 
-This template is a general purpose template I have created based on years of experience creating and developing test 
+This template is a general purpose template I have created based on years of experience creating and developing testBootstrap 
 automation frameworks for different organisations.  
 
 ## Description
 
 This framework deals with typical legacy corporate applications where logging-in is the costliest process because nobody 
-thought of testability when tha application was built. As test automation engineers, we tend to build test automation where we log-in once and then do all necessary 
+thought of testability when tha application was built. As testBootstrap automation engineers, we tend to build testBootstrap automation where we log-in once and then do all necessary 
 testing in that single session. This is especially true when the application is already pipelined, a nd we need to be able to run automated 
 tests during the deployment of these applications.
 
@@ -58,7 +58,7 @@ Joshua Manlunas
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE file for details
 
 ## Acknowledgments
 

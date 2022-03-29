@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pw:test": "PLAYWRIGHT_BROWSERS_PATH=./pw-browsers npx playwright test --project=smoke --grep=@Sample --headed"
+    "pw:test": "PLAYWRIGHT_BROWSERS_PATH=./pw-browsers NAME=jomans npx playwright test --debug --project=smoke --grep=@jomans --headed"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,11 @@
   "devDependencies": {
     "@playwright/test": "^1.19.2",
     "ts-node": "^10.6.0"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "cryptr": "^6.0.2",
+    "encrypt-decrypt-library": "^1.0.5",
+    "winston": "^3.6.0"
   }
 }
