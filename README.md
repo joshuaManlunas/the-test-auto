@@ -1,27 +1,45 @@
-# The ultimate testBootstrap framework template
+# The ultimate framework template
 
-This template is a general purpose template I have created based on years of experience creating and developing testBootstrap 
+This template is a general purpose template I have created based on years of experience creating and developing test
 automation frameworks for different organisations.  
 
 ## Description
 
 This framework deals with typical legacy corporate applications where logging-in is the costliest process because nobody 
-thought of testability when tha application was built. As testBootstrap automation engineers, we tend to build testBootstrap automation where we log-in once and then do all necessary 
-testing in that single session. This is especially true when the application is already pipelined, a nd we need to be able to run automated 
+thought of testability when tha application was built. As test automation engineers, we tend to build automation where we log-in once and then do all necessary 
+testing in that single session. This is especially true when the application is already pipelined, and we need to be able to run automated 
 tests during the deployment of these applications.
 
-If you decide to use this template please credit me as the original author and give credit where credit is due.
+I give this framework template to you for free. All I ask if you decide to use it is to please credit me as the original author.
 
 ## Getting Started
 Clone the framework
 ```
-git clone
+git clone git@github.com:joshuaManlunas/the-test-auto.git
 ```
+Cd to the directory ``cd the-test-auto/``
 
+Run npm install ``npm install``
+
+Install Playwright dependencies 
+```
+npx playwright install
+```
+Run initial test to check everything is working as expected
+```
+npx playwright test --grep=@initial --headed
+```
+You can also run via npm script ``npm run pw:test:initial``
+
+For more information please refer to the [Playwright CLI docs](https://playwright.dev/docs/cli)
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* nodejs
+* npm
+* Playwright
+* For Windows users you will need to use Cygwin or GitBash for running terminal commands. You can use CMD or Powershell 
+  but you will have issues when you start putting environemnt variables before the npm command like
+  ``ENV1=foo ENV2=bar npm run pw:test`` as Windows thinks ENV1 is an actual command.  
 
 ### Installing
 
@@ -38,7 +56,7 @@ code blocks for commands
 
 ## Help
 
-Any advise for common problems or issues.
+Any advice for common problems or issues.
 ```
 command to run if program contains helper info
 ```

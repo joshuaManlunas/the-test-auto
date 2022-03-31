@@ -1,6 +1,5 @@
 interface _iUser {
-    DEFAULT: { //user alias
-        accessNumber: string, //should be encrypted and decrypted on the fly
-        userPassword: string //should be encrypted and decrypted on the fly
-    }
+    //add more properties as needed
+    accessNumber: string, //should be encrypted and decrypted on the fly
+    userPassword: Object //should be encrypted and decrypted on the fly
 }

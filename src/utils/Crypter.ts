@@ -3,7 +3,7 @@ import * as crypto from 'crypto'
 const unlockKey = process.env.KEY || 'ChangeMe'
 const algorithm = 'aes-256-ctr';
 const secretKey = crypto.createHash('sha256').update(unlockKey).digest()
-//slice up the returned byte array to just the first 16 bits
+//slice up the returned byte array to just use the first 16 bits
 const iv = crypto.createHash('sha256').update('ChangeMeToo').digest().slice(0, 16)
 
 /**
@@ -36,7 +36,7 @@ export const decrypt = (data) => {
 };
 
 //SAMPLE USAGE
-// let encryptedData = encrypt('HELLO WORLD 123')
+// let encryptedData = encrypt('secret_sauce')
 // console.log(encryptedData)
 //
 // let decryptedData = decrypt(encryptedData)

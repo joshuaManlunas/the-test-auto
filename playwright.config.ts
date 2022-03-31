@@ -1,5 +1,8 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
+import * as TARGET from './src/configs/TargetEnvConfigs'
+
+const TEST_TARGET = TARGET[ process.env.TARGET || 'LOCAL'].targetUrl // Default target is local
 
 /**
  * Read environment variables from file.
@@ -11,6 +14,7 @@ import { devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
+  fullyParallel: true,
   globalSetup: require.resolve('./src/core/__Framework-init'),
   testDir: './tests',
   testMatch:'*spec.ts',
@@ -33,6 +37,7 @@ const config: PlaywrightTestConfig = {
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    baseURL: TEST_TARGET,
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
     video:'retain-on-failure',
@@ -41,31 +46,34 @@ const config: PlaywrightTestConfig = {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    /* Collect trace when the test fails. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
   },
 
-  /* Configure projects for major browsers */
   projects: [
       /* TEST TYPES projects */
     {
       name: 'smoke',
+      grep: /@smoke/,
       use: {
-        browserName: 'chromium', //set via env variable
-        // video:'on',
-        // video:'retain-on-failure',
+        baseURL: TEST_TARGET,
+        browserName: 'chromium',
       }
     },
     {
       name: 'e2e',
+      grep: /@smoke/,
       use: {
-        browserName: 'firefox' //set via env variable
+        baseURL: TEST_TARGET,
+        browserName: 'chromium'
       }
     },
     {
       name: 'regression',
+      grep: /@regression/,
       use: {
-        browserName: 'firefox' //set via env variable
+        baseURL: TEST_TARGET,
+        browserName: 'chromium'
       }
     },
     /* BROWSER TYPES projects */
