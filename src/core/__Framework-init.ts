@@ -7,7 +7,7 @@ let properties = PropertiesReader(`${path.resolve('./')}/framework.properties`)
 
 async function frameworkInit(config: FullConfig) {
     await frameworkLog('[ Initializing Framework ]...')
-    let requiredEnv = ['EVAR1', 'EVAR2', 'EVAR3'];
+    let requiredEnv = ['TARGET', 'TEST_USER']; // you can also pass your decryption KEY if desired
     frameworkLog(`Checking required env variables`)
     if(properties.get('envVarCheck')) {
         for (let envVar of requiredEnv) {

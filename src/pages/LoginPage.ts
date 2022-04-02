@@ -2,6 +2,7 @@ import {_iPage} from "./_iPage";
 import {Locator, Page} from "@playwright/test";
 import * as siteUser from '../configs/Users'
 import {decrypt} from "../utils/Crypter";
+import {expect} from "../../tests/__testBootstrap";
 
 export class LoginPage implements _iPage {
     readonly page: Page
@@ -26,5 +27,6 @@ export class LoginPage implements _iPage {
         await this.username.fill(derived_user.accessNumber)
         await this.password.fill(decrypt(derived_user.userPassword))
         await this.loginButton.click()
+        await expect(this.page).toHaveURL('https://www.saucedemo.com/inventory.html');
     }
 }

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "pw:install": "npx playwright install",
-    "pw:test:initial": "npx playwright test --grep=@initial --project=chromium --headed"
+    "pw:test:initial": "npx playwright test --grep=@initial --project=chromium --headed",
+    "pw:test:nonPOM": "npx playwright test --grep=@NonPOM --project=chromium --headed",
+    "pw:report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
