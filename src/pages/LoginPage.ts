@@ -22,7 +22,7 @@ export class LoginPage implements _iPage {
         return this
     }
 
-    async login(user: string = process.env.TEST_USER || 'DEFAULT_USER') {
+    async login(user: string = 'DEFAULT_USER') {
         let derived_user : _iUser = siteUser[ user ]
         await this.username.fill(derived_user.accessNumber)
         await this.password.fill(decrypt(derived_user.userPassword))

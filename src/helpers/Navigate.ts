@@ -1,9 +1,11 @@
 import {expect, Page} from "@playwright/test";
 import {_iPage} from "../pages/_iPage";
+import {frameworkLog as log} from "../utils/fLogger";
 
 export class Navigate{
     readonly page: Page
     constructor(page: Page) {
+        log("Initialising navigateTo helper...")
         this.page = page
     }
 

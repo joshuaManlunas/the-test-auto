@@ -1,12 +1,17 @@
-import { test, expect } from './__testBootstrap'
-import {frameworkLog as log } from "../src/utils/fLogger";
+import { test, expect } from '../__testBootstrap'
+import {frameworkLog as log } from "../../src/utils/fLogger";
 
 /**
  * This test follows the Page Object Model type of testing. Another option is to follow
  * the less structured type as shown in example.spec.ts
  */
 test.describe('Grouping tests with test describe', ()=> {
-    test('@initial Test to check everything is working', async ({ loginPage, mainPage}) => {
+    test('@initial Test to check everything is working', async ({
+            loginPage,
+            mainPage,
+            pageProvider,
+            navigateTo
+    }) => {
         await test.step('Go to the test page and login', async () => {
             log('Loading test page...')
             // Go to 'https://www.saucedemo.com'

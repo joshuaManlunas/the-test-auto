@@ -1,15 +1,24 @@
 import { FullConfig } from '@playwright/test';
 import { frameworkLog } from "../utils/fLogger";
-import * as path from "path";
-
-let PropertiesReader = require('properties-reader');
-let properties = PropertiesReader(`${path.resolve('./')}/framework.properties`)
+import { prop } from "../utils/fProperties"
 
 async function frameworkInit(config: FullConfig) {
     await frameworkLog('[ Initializing Framework ]...')
-    let requiredEnv = ['TARGET', 'TEST_USER']; // you can also pass your decryption KEY if desired
+
+    /** Check all your required env variables...
+     * decryption KEY will need to be checked here if you are going to use this feature
+     * To see the defaults check Crypter.ts file.
+     **/
+    const requiredEnv = [
+        'TARGET'
+        // ,'KEY' <-- recommended to set this key as an env variable via the command line
+    ];
+
     frameworkLog(`Checking required env variables`)
-    if(properties.get('envVarCheck')) {
+    /**
+     * Do all framework setup here including handling of all props that has been set in the framework.properties file
+     */
+    if(prop.envVarCheck) { //required env variables check is disabled by default
         for (let envVar of requiredEnv) {
             if (process.env.hasOwnProperty(envVar)) {
                 frameworkLog(`${envVar} was found`)
