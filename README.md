@@ -42,7 +42,7 @@ For more Playwright information please refer to the [Playwright CLI docs](https:
   ``ENV1=foo ENV2=bar npm run pw:test`` as Windows thinks ENV1 is an actual command.  
 
 ### Authoring Tests
-There two types of tests that are supported by default by this framework.
+There are two types of tests that are supported by default by this framework.
 1. Non Page Object Model -- these type of tests are faster to author although they are a bit more unstructured and test 
 files would tend to be larger in terms of lines of code and code reuse is less. It doesn't make it less effective and performant though 
 so it just goes down to preference. If this is the preferred test type for you check `example.spec.ts`
