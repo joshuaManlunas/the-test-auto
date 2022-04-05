@@ -117,6 +117,9 @@ Joshua Manlunas --
 
 * 1.0 -- So it begins...
 
+## Contributing Code
+* If you want to contribute, create a pull request. 
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
