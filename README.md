@@ -46,6 +46,9 @@ There two types of tests that are supported by default by this framework.
 1. Non Page Object Model -- these type of tests are faster to author although they are a bit more unstructured and test 
 files would tend to be larger in terms of lines of code and code reuse is less. It doesn't make it less effective and performant though 
 so it just goes down to preference. If this is the preferred test type for you check `example.spec.ts`
+
+Note: `example.spec.ts` was created with `npm init playwright@latest` as shown in Playwright's getting started guide.
+
 2. Page Object Model -- For better organisation and code reuse, organisations would usually use this type of tests.
 Test engineers would do the coding work upfront and just reuse and update page objects as needed. 
 A sample of this test can be found here `initial.spec.ts`. 
