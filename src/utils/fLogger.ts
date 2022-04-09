@@ -1,6 +1,6 @@
 import * as winston from "winston"
 
-function frameworkLog(message: string, logLevel: string = 'info') {
+export function frameworkLog(message: string, logLevel: string = 'info') {
     const logger = winston.createLogger({
         transports: [
             new winston.transports.Console({format: winston.format.simple()}),
@@ -12,5 +12,3 @@ function frameworkLog(message: string, logLevel: string = 'info') {
         message: `[FRAMEWORK] ${message}`
     })
 }
-
-export { frameworkLog }

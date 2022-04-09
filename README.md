@@ -129,4 +129,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-Frustration, boredom, politics, etc.
+Frustration, boredom, politics
