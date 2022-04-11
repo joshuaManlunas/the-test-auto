@@ -103,6 +103,16 @@ test('@initial Test to check everything is working', async ({ loginPage, mainPag
 * `npx playwright test --debug` -- for debugging tests 
 * `npx playwright --help` -- for more info
 
+## Utilities
+Three utilities are provided by default.
+* Crypter.ts -- utility class for encrypting and decrypting strings. You would typically use this utility for decrypting user passwords on the fly during test execution.
+* fLogger.ts -- framework logging utility.
+* fProperties.ts -- utility for getting property values from the `framework.properties` file.
+
+## Helpers
+* Navigate.ts -- helper for page navigation
+* PageObjectProvider.ts -- helper for providing all page objects
+
 ## Help
 For general help and info refer to the official [Playwright documentation](https://playwright.dev/).
 CLI Helper info can be reached using the command:
