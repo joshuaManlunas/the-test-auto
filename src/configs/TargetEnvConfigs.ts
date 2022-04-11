@@ -1,3 +1,5 @@
+import {_iConfig} from "./_iConfig";
+
 export const LOCAL : _iConfig = { //Local Test
     targetUrl: 'https://www.saucedemo.com/',
     testMsg: "Hello from LOCAL Test environment"

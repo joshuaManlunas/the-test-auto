@@ -1,3 +1,5 @@
+import {_iUser} from "./_iUser";
+
 export const DEFAULT_USER: _iUser = {
     accessNumber: "standard_user",
     userPassword: { ENC: '9195ee5595adf02b563288dc' }
