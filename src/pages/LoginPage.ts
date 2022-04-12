@@ -3,6 +3,7 @@ import {Locator, Page} from "@playwright/test";
 import * as siteUser from '../configs/Users'
 import {decrypt} from "../utils/Crypter";
 import {expect} from "../../tests/__testBootstrap";
+import {_iUser} from "../configs/_iUser";
 
 export class LoginPage implements _iPage {
     readonly page: Page
