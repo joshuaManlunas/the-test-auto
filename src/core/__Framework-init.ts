@@ -8,7 +8,7 @@ async function frameworkInit(config: FullConfig) {
     /** Check all your required env variables...
      * decryption KEY will need to be checked here if you are going to use this feature
      * To see the defaults check Crypter.ts file.
-     **/
+     */
     const requiredEnv = [
         'TARGET'
         // ,'KEY' <-- recommended to set this key as an env variable via the command line
@@ -18,8 +18,8 @@ async function frameworkInit(config: FullConfig) {
     /**
      * Do all framework setup here including handling of all props that has been set in the framework.properties file
      */
-    if(prop.envVarCheck) { //required env variables check is disabled by default
-        for (let envVar of requiredEnv) {
+    if(prop.envVarCheck) { // required env variables check is disabled by default
+        for (const envVar of requiredEnv) {
             if (process.env.hasOwnProperty(envVar)) {
                 frameworkLog(`${envVar} was found`)
             } else {

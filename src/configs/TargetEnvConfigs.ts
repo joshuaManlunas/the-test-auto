@@ -1,18 +1,18 @@
-import {_iConfig} from "./_iConfig";
+import { IConfig } from "./IConfig";
 
-export const LOCAL : _iConfig = { //Local Test
+export const LOCAL: IConfig = { // Local Test
     targetUrl: 'https://www.saucedemo.com/',
     testMsg: "Hello from LOCAL Test environment"
 }
-export const ST : _iConfig = { //System Test
+export const ST: IConfig = { // System Test
     targetUrl: 'https://www.saucedemo.com/',
     testMsg: "Hello from ST: System Test environment"
 }
-export const SIT : _iConfig = { //System Integration Test
+export const SIT: IConfig = { // System Integration Test
     targetUrl: 'https://www.saucedemo.com/',
     testMsg: "Hello from SIT: System Integration Testing environment"
 }
-export const OAT : _iConfig = { //Operationa Acceptance Test
+export const OAT: IConfig = { // Operationa Acceptance Test
     targetUrl: 'https://www.saucedemo.com/',
     testMsg: "Hello from OAT: Operations Acceptance Testing environment"
 }

@@ -1,4 +1,4 @@
-export interface _iConfig {
+export interface IConfig {
     targetUrl: string,
     testMsg: string
 }

@@ -1,8 +1,8 @@
-import {test as base} from "@playwright/test";
-import {LoginPage} from "../src/pages/LoginPage";
-import {MainPage} from "../src/pages/MainPage";
-import {Navigate} from "../src/helpers/Navigate";
-import {pageObjectProvider} from "../src/helpers/PageObjectProvider";
+import { test as base } from "@playwright/test";
+import { LoginPage } from "../src/pages/LoginPage";
+import { MainPage } from "../src/pages/MainPage";
+import { Navigate } from "../src/helpers/Navigate";
+import { pageObjectProvider } from "../src/helpers/PageObjectProvider";
 
 type Pages = {
     loginPage: LoginPage,
@@ -15,21 +15,21 @@ type Helpers = {
     pageProvider: pageObjectProvider
 }
 /**
- * Provide everything a test could need eg. Page-objects, helpers, utils etc. here as fixtures.
+ * Provide everything a test could need e.g. Page-objects, helpers, utils etc. here as fixtures.
  * If in case you want to separate out the helpers, utils etc. just create a new type eg. type Helpers = {}, type Utils = {} ,etc.
- * Then just add them to the base.extend params eg. base.extend< Pages & Helpers & Utils >
+ * Then just add them to the base. Extend params e.g. base.extend< Pages & Helpers & Utils >
  */
 export const test = base.extend<Pages & Helpers>({
-    //Pages Section
+    // Pages Section
     loginPage: async ({page}, use) => {
         await use( await new LoginPage(page) )
     },
     mainPage: async ({page}, use) => {
         await use( await new MainPage(page) )
     },
-    //Utilities Section
+    // Utilities Section
 
-    //Helpers Section
+    // Helpers Section
     navigateTo: async ({page}, use)=> {
       await use(await new Navigate(page))
     },

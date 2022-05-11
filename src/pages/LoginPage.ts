@@ -1,11 +1,11 @@
-import {_iPage} from "./_iPage";
-import {Locator, Page} from "@playwright/test";
+import { IPage } from "./IPage";
+import { Locator, Page } from "@playwright/test";
 import * as siteUser from '../configs/Users'
-import {decrypt} from "../utils/Crypter";
-import {expect} from "../../tests/__testBootstrap";
-import {_iUser} from "../configs/_iUser";
+import { decrypt } from "../utils/Crypter";
+import { expect } from "../../tests/__testBootstrap";
+import { IUser } from "../configs/IUser";
 
-export class LoginPage implements _iPage {
+export class LoginPage implements IPage {
     readonly page: Page
     readonly username: Locator
     readonly password: Locator
@@ -24,9 +24,9 @@ export class LoginPage implements _iPage {
     }
 
     async login(user: string = 'DEFAULT_USER') {
-        let derived_user : _iUser = siteUser[ user ]
-        await this.username.fill(derived_user.accessNumber)
-        await this.password.fill(decrypt(derived_user.userPassword))
+        const derivedUser : IUser = siteUser[ user ]
+        await this.username.fill(derivedUser.accessNumber)
+        await this.password.fill(decrypt(derivedUser.userPassword))
         await this.loginButton.click()
         await expect(this.page).toHaveURL('https://www.saucedemo.com/inventory.html');
     }

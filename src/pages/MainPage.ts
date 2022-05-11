@@ -1,12 +1,12 @@
 import {Page} from "@playwright/test";
-import {_iPage} from "./_iPage";
+import {IPage} from "./IPage";
 import {expect} from "../../tests/__testBootstrap";
 
 /**
  * This Page Object is not made properly because I didn't see the need to because you should be using the
  * LoginPage.ts as a template. This file was create just for quick testing use.
  */
-export class MainPage implements _iPage{
+export class MainPage implements IPage{
     readonly page : Page
 
     constructor(page: Page) {

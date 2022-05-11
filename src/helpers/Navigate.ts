@@ -1,6 +1,6 @@
-import {expect, Page} from "@playwright/test";
-import {_iPage} from "../pages/_iPage";
-import {frameworkLog as log} from "../utils/fLogger";
+import { expect, Page } from "@playwright/test";
+import { IPage } from "../pages/IPage";
+import { frameworkLog as log } from "../utils/fLogger";
 
 export class Navigate{
     readonly page: Page
@@ -9,7 +9,7 @@ export class Navigate{
         this.page = page
     }
 
-    async toLocation<T extends _iPage >(returnedPageObject: T) {
+    async toLocation<T extends IPage >(returnedPageObject: T) {
         // add custom logging here
         // @ts-ignore
         return await new returnedPageObject(this.page).load()
