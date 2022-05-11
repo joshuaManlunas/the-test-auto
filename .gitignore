@@ -3,3 +3,4 @@ test-results/
 playwright-report/
 pw-browsers/
 logs/
+package-lock.json
