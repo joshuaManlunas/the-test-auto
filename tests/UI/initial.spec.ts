@@ -1,5 +1,5 @@
 import { test, expect } from '../__testBootstrap'
-import {frameworkLog as log } from "../../src/utils/fLogger";
+import { frameworkLog as log } from "../../src/utils/fLogger";
 
 /**
  * This test follows the Page Object Model type of testing. Another option is to follow

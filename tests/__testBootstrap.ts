@@ -34,7 +34,6 @@ export const test = base.extend<Pages & Helpers>({
       await use(await new Navigate(page))
     },
     pageProvider: async ({page}, use)=> {
-        // @ts-ignore
         await use(await pageObjectProvider(page))
     }
 })

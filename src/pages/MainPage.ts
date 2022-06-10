@@ -1,6 +1,6 @@
-import {Page} from "@playwright/test";
-import {IPage} from "./IPage";
-import {expect} from "../../tests/__testBootstrap";
+import { Page } from "@playwright/test";
+import { IPage } from "./IPage";
+import { expect } from "../../tests/__testBootstrap";
 
 /**
  * This Page Object is not made properly because I didn't see the need to because you should be using the

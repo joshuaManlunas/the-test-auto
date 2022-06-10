@@ -16,7 +16,7 @@ test.describe('@NonPOM Testing without using the Page Object Model', ()=> {
       // Create 1st todo.
       await page.locator('.new-todo').fill(TODO_ITEMS[0]);
       await page.locator('.new-todo').press('Enter');
-      //FAIL to show off reporting features
+      // FAIL to show off reporting features
       expect(1).toEqual(2)
 
       // Make sure the list only has one todo item.
